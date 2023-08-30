@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/css/uikit.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-qK3ow4XmY+20/MmW/eXEkgCrdS78KJ6v5IeLWx6J5ID5U5N7vY8GMdWVJyzumFgQ2EhGIt8HwWbzw70eLPG2gQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-PGeAl1a94IzJhN/2QkHvTVX9yWg+ai/0JJOjjlNtZbGwZ8/iRiAFRtZsLtnnX9CQ8+jGYmHR1rJ3n0oLdJ2UMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <title>Diseño de interfaces</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="https://assets.stickpng.com/images/58e9117beb97430e819064d6.png" alt="Logo del sitio web">
+                <h1>NASA API</h1>
+                <ul>
+                    <li>
+                        <button id="menu-icon">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <button id="menu-icon-derecho">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="canvas-container">
+            <div class="header-text">
+                <h1>EL ESPACIO INFINITO A TU ALCANCE</h1>
+                <p>Un ejemplo de cómo navegar por el ciberespacio</p>
+            </div>
+            <div id="miCanvas" class="cv">
+                
+            </div>
+        </div>
+        <main>
+            <hgroup>
+                <h1 id="titulo">"IMAGENES PROPORCIONADAS POR SATÉLITE N.A.S.A🤖"</h1>
+            </hgroup>
+            <div id="panel-izquierdo" class="uk-offcanvas" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar">
+                    <input type="date" id="date-picker">
+                    <hr>
+                    <img src="https://i.pinimg.com/originals/7f/5e/be/7f5ebeb0c54bb369a25656eda9ee7731.jpg" alt="fondo panel">
+                </div>
+            </div>
+            <div id="panel-derecho" class="uk-offcanvas" uk-offcanvas="flip: true">
+                <div class="uk-offcanvas-bar">
+                    <img src="https://i.pinimg.com/originals/7f/5e/be/7f5ebeb0c54bb369a25656eda9ee7731.jpg" alt="fondo panel">
+                    <p>La Administración Nacional de Aeronáutica y el Espacio, más conocida como NASA (por sus siglas en inglés, National Aeronautics and Space Administration), es la agencia del gobierno estadounidense responsable del programa espacial civil, así como de las investigaciones aeronáutica y aeroespacial.</p>
+                </div>
+            </div>
+            <div id="image-container">
+                
+                <img id="nasa-image">
+                <div id="image-overlay">
+                    <h2 id="image-title"></h2>
+                    <div id="image-details">
+                        <span id="image-date"></span>
+                        <span id="image-author"></span>
+                        <div id="image-icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="uk-button uk-button-default" id="boton-modal" href="#modal-sections" uk-toggle>Info/Open/Close</a>
+            <div id="modal-sections" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title"></h2>
+                    </div>
+                    <div class="uk-modal-body">
+                        <p></p>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                        <button class="uk-button uk-button-primary" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="logo">
+                <img src="https://e7.pngegg.com/pngimages/248/272/png-clipart-nasa-insignia-johnson-space-center-logo-dumbbell-thrusters-benefits-logo-nasa.png" alt="Logo del sitio web">
+            </div>
+            <div class="social-media">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="copyright">
+                &copy; 2023 NASA API/JOSE MANUEL 2ºDAW
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/js/uikit-icons.min.js"></script>
+        <script src="uikit/dist/js/uikit-icons.min.js"></script>
+        <script src="sketch.js"></script>
+        <script src="particle.js"></script>
+        <script src="shader.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
